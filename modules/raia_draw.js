@@ -1,4 +1,4 @@
-Raia.Core.Lib.open("libraia_draw");
+Raia.Core.Lib.open("raia_draw");
 
 module.exports = {
     noise: Raia.Core.Lib.func("raia_draw_noise", 3), // uint8_t *pixels, int width, int height

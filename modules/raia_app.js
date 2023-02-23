@@ -1,5 +1,6 @@
-Raia.Core.Lib.open("libraia_app");
+Raia.Core.Lib.open("raia_app");
 
+/*
 if (RAIA_APIS_GLOBAL_FUNCTIONS === true) {
     globalThis.window = Raia.Core.Lib.func("raia_app_window_init", 4);
     globalThis.title = Raia.Core.Lib.func("raia_app_window_set_title", 2);
@@ -13,6 +14,7 @@ if (RAIA_APIS_GLOBAL_FUNCTIONS === true) {
     globalThis.onupdate = Raia.Core.Lib.func("raia_app_event_update_callback", 1);
     globalThis.enupdate = Raia.Core.Lib.func("raia_app_event_update_enable", 0);
 }
+*/
 
 module.exports = {
     Window: {
@@ -38,7 +40,7 @@ module.exports = {
         drop: Raia.Core.Lib.func("raia_app_event_drop_callback", 2), // (function(int count, const char** paths))
         //update: Raia.Core.Lib.func("raia_app_event_update_callback", 1), // (function())
         //updateEnable: Raia.Core.Lib.func("raia_app_event_update_enable", 0), // void
-    },
+    },/*
     GLES: {
         activeTexture: Raia.Core.Lib.func("duk_gl_glActiveTexture", 1),
         attachShader: Raia.Core.Lib.func("duk_gl_glAttachShader", 2),
@@ -266,5 +268,5 @@ module.exports = {
         setTime: Raia.Core.Lib.func("glfw_set_time", 1),
         makeContextCurrent: Raia.Core.Lib.func("glfw_make_context_current", 1),
         getCurrentContext: Raia.Core.Lib.func("glfw_get_current_context", 0),
-    },
+    },*/
 };
