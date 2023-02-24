@@ -1,20 +1,5 @@
-Raia.Core.Lib.open("raia_app");
+Raia.Core.Lib.open("libraia_app");
 
-/*
-if (RAIA_APIS_GLOBAL_FUNCTIONS === true) {
-    globalThis.window = Raia.Core.Lib.func("raia_app_window_init", 4);
-    globalThis.title = Raia.Core.Lib.func("raia_app_window_set_title", 2);
-    globalThis.isclose = Raia.Core.Lib.func("raia_app_window_should_close", 0);
-    globalThis.evpoll = Raia.Core.Lib.func("raia_app_window_poll_events", 0);
-    globalThis.redraw = Raia.Core.Lib.func("raia_app_screen_redraw", 1);
-    globalThis.onkey = Raia.Core.Lib.func("raia_app_event_key_callback", 1);
-    globalThis.onerror = Raia.Core.Lib.func("raia_app_event_error_callback", 1);
-    globalThis.onmove = Raia.Core.Lib.func("raia_app_event_cursor_position_callback", 1);
-    globalThis.onclick = Raia.Core.Lib.func("raia_app_event_mouse_button_callback", 1);
-    globalThis.onupdate = Raia.Core.Lib.func("raia_app_event_update_callback", 1);
-    globalThis.enupdate = Raia.Core.Lib.func("raia_app_event_update_enable", 0);
-}
-*/
 
 module.exports = {
     Window: {
@@ -40,7 +25,17 @@ module.exports = {
         drop: Raia.Core.Lib.func("raia_app_event_drop_callback", 2), // (function(int count, const char** paths))
         //update: Raia.Core.Lib.func("raia_app_event_update_callback", 1), // (function())
         //updateEnable: Raia.Core.Lib.func("raia_app_event_update_enable", 0), // void
-    },/*
+    },
+    GLFW: {
+        joystickPresent: Raia.Core.Lib.func("raia_app_glfw_joystick_present", 1),
+        getJoystickAxes: Raia.Core.Lib.func("raia_app_glfw_get_joystick_axes", 1),
+        getJoystickButtons: Raia.Core.Lib.func("raia_app_glfw_get_joystick_buttons", 1),
+        getJoystickName: Raia.Core.Lib.func("raia_app_glfw_get_joystick_name", 1),
+    }
+};
+
+
+/*
     GLES: {
         activeTexture: Raia.Core.Lib.func("duk_gl_glActiveTexture", 1),
         attachShader: Raia.Core.Lib.func("duk_gl_glAttachShader", 2),
@@ -268,5 +263,5 @@ module.exports = {
         setTime: Raia.Core.Lib.func("glfw_set_time", 1),
         makeContextCurrent: Raia.Core.Lib.func("glfw_make_context_current", 1),
         getCurrentContext: Raia.Core.Lib.func("glfw_get_current_context", 0),
-    },*/
-};
+    },
+*/
